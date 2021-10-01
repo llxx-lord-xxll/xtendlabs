@@ -1,0 +1,157 @@
+// Variables
+//
+$brand--dark: #323232 !default;
+$brand--g1: #646464 !default;
+$brand--g2: #f8f8f8 !default;
+$white: #FFFFFF !default;
+
+$brand--red:   #F05945 !default;
+$brand--r1:   #EB5231 !default;
+
+$brand--orange:   #EE6E30 !default;
+$brand--o1:   #F3932F !default;
+$brand--o2:   #F39030 !default;
+
+$brand--blue: #303C6D !default;
+$brand--l1: #1E75B8 !default;
+$brand--l2: #4D91C5 !default;
+$brand--l3: #189CEF !default;
+$brand--l4: #E8F6FF !default;
+
+
+$brand-colors: (
+  'blue': ( 'root': $brand--blue, 'faded': rgba($brand--blue, .36) ),
+  'dark': ( 'root': $brand--dark, 'faded': rgba($brand--dark, .36) ),
+  'white': ( 'root': $white, 'faded': rgba($white, .36) ),
+  'light1': ( 'root': $brand--l1, 'faded': rgba($brand--l1, .36) ),
+  'light2': ( 'root': $brand--l2, 'faded': rgba($brand--l2, .36) ),
+  'light3': ( 'root': $brand--l3, 'faded': rgba($brand--l3, .36) ),
+  'grey1': ( 'root': $brand--g1, 'faded': rgba($brand--g1, .36) ),
+  'grey2': ( 'root': $brand--g2, 'faded': rgba($brand--g2, .36) ),
+  'red': ( 'root': $brand--red, 'faded': rgba($brand--red, .36) ),
+  'red1': ( 'root': $brand--r1, 'faded': rgba($brand--r1, .36) ),
+  'orange': ( 'root': $brand--orange, 'faded': rgba($brand--orange, .36) ),
+  'orange1': ( 'root': $brand--o1, 'faded': rgba($brand--o1, .36) ),
+);
+
+
+$color-valid:   $brand--l3 !default;
+$color-invalid: $brand--red !default;
+
+$high-box-shadow: 0 .64rem 1rem rgba($brand--dark, .1);
+$medium-box-shadow: 0 .36rem .64rem rgba($brand--dark, .1);
+$low-box-shadow: 0 .25rem 36rem rgba($brand--dark, .1);
+
+$general-transition: all 0.36s;
+
+$col-unit:          100% / 12 !default;
+
+$line-height-lg:              1.5 !default;
+$line-height-sm:              1.5 !default;
+$border-width:                1px !default;
+$link-color:                  $brand--dark;
+$link-hover-color:            $brand--orange;
+$border-radius:               .25rem;
+$border-radius-sm:            .15rem;
+$border-radius-lg:            .36rem;
+
+
+//Bootstrap vars
+
+// Typography
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-sm:                $font-size-base * .875 !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:         .375rem !default;
+$input-btn-padding-x:         .75rem !default;
+$input-btn-font-family:       null !default;
+$input-btn-font-size:         $font-size-base !default;
+$input-btn-line-height:       $line-height-base !default;
+
+$input-btn-focus-width:       .2rem !default;
+$input-btn-focus-color:       rgba($brand--blue, .25) !default;
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+$input-btn-padding-y-sm:      .25rem !default;
+$input-btn-padding-x-sm:      .5rem !default;
+$input-btn-font-size-sm:      $font-size-sm !default;
+$input-btn-line-height-sm:    $line-height-sm !default;
+
+$input-btn-padding-y-lg:      .5rem !default;
+$input-btn-padding-x-lg:      1rem !default;
+$input-btn-font-size-lg:      $font-size-lg !default;
+$input-btn-line-height-lg:    $line-height-lg !default;
+
+$input-btn-border-width:      $border-width !default;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:               $input-btn-padding-y !default;
+$btn-padding-x:               $input-btn-padding-x !default;
+$btn-font-family:             $input-btn-font-family !default;
+$btn-font-size:               $input-btn-font-size !default;
+$btn-line-height:             $input-btn-line-height !default;
+
+$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+$btn-font-size-sm:            $input-btn-font-size-sm !default;
+$btn-line-height-sm:          $input-btn-line-height-sm !default;
+
+$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+$btn-font-size-lg:            $input-btn-font-size-lg !default;
+$btn-line-height-lg:          $input-btn-line-height-lg !default;
+
+$btn-border-width:            $input-btn-border-width !default;
+
+$btn-font-weight:             $font-weight-normal !default;
+$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($brand--dark, .075) !default;
+$btn-focus-width:             $input-btn-focus-width !default;
+$btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+$btn-disabled-opacity:        .65 !default;
+$btn-active-box-shadow:       inset 0 3px 5px rgba($brand--dark, .125) !default;
+
+$btn-link-color:              $link-color !default;
+$btn-link-hover-color:        $link-hover-color !default;
+$btn-link-disabled-color:     $brand--g1 !default;
+
+$btn-block-spacing-y:         .5rem !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           $border-radius !default;
+$btn-border-radius-lg:        $border-radius-lg !default;
+$btn-border-radius-sm:        $border-radius-sm !default;
+
+$btn-transition:    color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+
+@mixin bg-gradient(){
+  background: linear-gradient(0deg, $brand--red 0%, $brand--o1 60%);
+  background: -webkit-linear-gradient(0deg, $brand--red 0%, $brand--o1 60%);
+  background: -moz-linear-gradient(0deg, $brand--red 0%, $brand--o1 60%);
+  background: -ms-linear-gradient(0deg, $brand--red 0%, $brand--o1 60%);
+}
+
+@mixin border-gradient(){
+  border-color: linear-gradient(0deg, $brand--red 0%, $brand--o1 60%);
+  border-color: -webkit-linear-gradient(0deg, $brand--red 0%, $brand--o1 60%);
+  border-color: -moz-linear-gradient(0deg, $brand--red 0%, $brand--o1 60%);
+  border-color: -ms-linear-gradient(0deg, $brand--red 0%, $brand--o1 60%);
+}
