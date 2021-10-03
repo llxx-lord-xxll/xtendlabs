@@ -15,12 +15,14 @@
 
 html {
   color: #222;
-  font-size: 1em;
+  font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1900 - 300)));
   font-family: 'Nunito Sans', sans-serif !important;
   line-height: 1.4;
+  width: 100%;
 }
 body{
   font-family: 'Nunito Sans', sans-serif !important;
+  width: 100%;
 }
 
 /*
@@ -387,6 +389,11 @@ footer.footer-complex{
   position: relative;
   margin-top: 5rem;
   color: $white;
+  @media only screen and (max-width: 992px) {
+    &{
+      background: $brand--blue;
+    }
+  }
   .subfooter{
     padding-top: 5rem;
     .social-links{
@@ -489,6 +496,9 @@ footer.footer-complex{
 
 .player{
   position: relative;
+  max-width: 100%;
+  margin: 4rem;
+  text-align: center;
   &:before{
     position: absolute;
     content: "";
@@ -507,15 +517,15 @@ footer.footer-complex{
     content: "";
     background: url(../img/player-bg.png) center center no-repeat;
     background-size: 100% 100%;
-    height: 130%;
-    width: 120%;
-    left: -4rem;
-    top: -3rem;
+    height: calc(100% + 4rem);
+    width: calc(100% + 4rem);
+    left: -2rem;
+    top: -2rem;
     z-index: -99;
   }
   video,iframe{
     height: 100%;
-    width: 100%;
+    width: calc(100% - 3.5rem);
     position: relative;
   }
 }
@@ -525,12 +535,28 @@ footer.footer-complex{
     border-color: $brand--blue !important;
   }
 }
+.xtl-content{
+  @media only screen and (max-width: 1366px) {
+    padding: 0 !important;
+  }
+}
+
 .home{
   .xtl-slider{
+    z-index: -999;
+
     .carousel-item{
       p{
         width: 75%;
         margin-left: auto;
+      }
+    }
+  }
+
+  .reasons{
+    @media only screen and (max-width: 1400px) {
+      &{
+        padding-top: 10rem;
       }
     }
   }
