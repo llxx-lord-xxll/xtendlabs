@@ -18,11 +18,9 @@ html {
   font-size: calc(10px + (16 - 10) * ((100vw - 320px) / (1900 - 300)));
   font-family: 'Nunito Sans', sans-serif !important;
   line-height: 1.4;
-  width: 100%;
 }
 body{
   font-family: 'Nunito Sans', sans-serif !important;
-  width: 100%;
 }
 
 /*
@@ -368,6 +366,7 @@ h1,h2,h3,h4,h5,h6{
   text-align: right;
   padding-right: 32px;
   font-size: 1.5625rem;
+  padding-top: 1rem;
   &:after{
     content: "";
     height: 32px;
@@ -375,7 +374,13 @@ h1,h2,h3,h4,h5,h6{
     background: url(../img/icon-back.png) center bottom no-repeat;
     background-size: cover;
     position: absolute;
-    top: 2px;
+    transform: translate(0, 10%);
+    @media only screen and (max-width: 992px) {
+        &{
+          transform: translate(0, -8%);
+        }
+    }
+
   }
 }
 
@@ -392,6 +397,9 @@ footer.footer-complex{
   @media only screen and (max-width: 992px) {
     &{
       background: $brand--blue;
+    }
+    &:before{
+      display: none;
     }
   }
   .subfooter{
