@@ -408,14 +408,21 @@ footer.footer-complex{
       list-style: none;
       display: flex;
       justify-content: end;
+      @media only screen and (max-width: 657px) {
+        &{
+          justify-content: center;
+          padding-left: 0;
+        }
+      }
       li{
-        background: azure;
-        padding-top: 4px;
-        width: 32px;
-        height: 32px;
+        background: $white;
+        padding: 0.5rem;
         text-align: center;
         border-radius: 50%;
         margin-right: 1rem;
+        a{
+          aspect-ratio:1/1;
+        }
       }
     }
   }
@@ -425,7 +432,11 @@ footer.footer-complex{
     padding-right: 12rem;
     .widget-2,.widget-3,.widget-4{
       display: table;
-      margin: auto;
+      @media only screen and (min-width: 657px) {
+        &{
+          margin: auto;
+        }
+      }
       ul{
         list-style: none;
         padding-left: 0;

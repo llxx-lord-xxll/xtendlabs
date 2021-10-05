@@ -1,8 +1,8 @@
+let interacted = false;
 jQuery(document).ready(function ($){
   // Video Player
   $('.player video').each(function (index,elem){
     elem.controls = false;
-    console.log(elem);
   });
   $('.player').before().click(function (e) {
     $(this).find('video').get(0).play();
@@ -26,8 +26,34 @@ jQuery(document).ready(function ($){
     this.play();
     this.controls = true;
   })
-
   // Video Player End
+
+  // this function runs every time you are scrolling
+
+  $(window).scroll(function() {
+    var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+    var top_of_screen = $(window).scrollTop();
+
+    $('video').each(function (index,item){
+      var top_of_element = $(item).offset().top;
+      var bottom_of_element = $(item).offset().top + $(item).outerHeight();
+      if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+        if (item.paused && $(item).attr('autoplay') && interacted){
+          item.play();
+        }
+      } else {
+        if (!item.paused){
+          item.pause();
+        }
+      }
+    });
+
+
+
+  });
+  $(window).bind("click", function (e){
+    interacted = true;
+  });
 })
 
 
