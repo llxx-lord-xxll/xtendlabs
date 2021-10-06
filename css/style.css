@@ -275,11 +275,32 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
 }
 
-.bg-y-path {
+.bg-t-path {
   position: relative;
   padding-top: 0;
   padding-bottom: 3rem;
   margin-top: 5rem;
+  margin-bottom: 22%;
+}
+.bg-t-path > div {
+  z-index: 9999;
+}
+.bg-t-path:before {
+  content: "";
+  background: url(../img/bg-path.png) no-repeat center;
+  background-size: 109% 100%;
+  width: 100%;
+  transform: translate(0, -32%);
+  z-index: -999;
+  position: absolute;
+  aspect-ratio: 16/9;
+}
+
+.bg-y-path {
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  margin-top: 0;
   margin-bottom: 22%;
 }
 .bg-y-path > div {
@@ -302,6 +323,28 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 109% 100%;
   width: 100%;
   transform: translate(0, -32%);
+  z-index: -999;
+  position: absolute;
+  aspect-ratio: 16/9;
+}
+
+.bg-b-path {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 22%;
+}
+.bg-b-path > div {
+  z-index: 9999;
+}
+.bg-b-path:after {
+  content: "";
+  background: url(../img/bg-path.png) no-repeat center;
+  background-size: 109% 100%;
+  width: 100%;
+  bottom: 0;
+  transform: translate(0, 39%);
   z-index: -999;
   position: absolute;
   aspect-ratio: 16/9;
@@ -402,9 +445,11 @@ footer.footer-complex .subfooter .social-links {
 }
 footer.footer-complex .subfooter .social-links li {
   background: #FFFFFF;
-  padding: 0.5rem;
+  padding-top: 0.3rem;
   text-align: center;
   border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
   margin-right: 1rem;
 }
 footer.footer-complex .subfooter .social-links li a {
@@ -541,6 +586,15 @@ footer.footer-complex:before {
 .home .xtl-slider .carousel-item p {
   width: 75%;
   margin-left: auto;
+}
+.home .xtl-slider-2 {
+  overflow: hidden;
+}
+.home .xtl-slider-2 .carousel-item {
+  max-height: calc(100vh - 12rem);
+}
+.home .xtl-slider-2 .carousel-item img {
+  filter: brightness(65%) contrast(0.9);
 }
 @media only screen and (max-width: 1400px) {
   .home .reasons {
@@ -809,6 +863,45 @@ h1 {
     background: none;
     padding: 15px;
   }
+}
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-25 {
+  opacity: 0.25;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.opacity-0-hover:hover {
+  opacity: 0 !important;
+}
+
+.opacity-25-hover:hover {
+  opacity: 0.25 !important;
+}
+
+.opacity-50-hover:hover {
+  opacity: 0.5 !important;
+}
+
+.opacity-75-hover:hover {
+  opacity: 0.75 !important;
+}
+
+.opacity-100-hover:hover {
+  opacity: 1 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
